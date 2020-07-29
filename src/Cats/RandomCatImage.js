@@ -14,24 +14,10 @@ const Image = styled.img`
 
 function RandomCatImage(props) {
   const [catImageUrl, setCatImageUrl] = useState(null);
-  const [timeLeft, setTimeLeft] = useState(30);
-
-  // variable to trigger fetch effect hook. ignore the value, just switching T and F
-  const [refetch, setRefetch] = useState(true);
+  const { timeLeft, refetch } = props;
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setTimeLeft(timeLeft - 1);
-      if (timeLeft === 0) {
-        setTimeLeft(30);
-        setRefetch(!refetch);
-        setCatImageUrl(null);
-      }
-    }, 1000);
-    return () => clearTimeout(timer);
-  });
-
-  useEffect(() => {
+    setCatImageUrl(null);
     fetch('https://api.thecatapi.com/v1/images/search')
       .then((response) => {
         return response.json();
