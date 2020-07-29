@@ -7,6 +7,7 @@ import RandomCatImage from './Cats/RandomCatImage';
 import './App.css';
 import RandomDogImage from './Dogs/RandomDogImage';
 import RandomCatFact from './Cats/RandomCatFact';
+import CatBreeds from './Cats/CatBreeds';
 
 const MainContainer = styled.div`
   width: 500px;
@@ -52,6 +53,7 @@ function App() {
           timeLeft={timeLeft}
           refetch={refetch}
         />
+        <CatBreeds path="/catBreeds" />
       </Router>
     </MainContainer>
   );

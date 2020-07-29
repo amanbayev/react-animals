@@ -11,7 +11,7 @@ const MainContainer = styled.nav`
   justify-content: space-between;
 `;
 
-const Title = styled.div``;
+// const Title = styled.div``;
 
 function Header(props) {
   return (
@@ -19,6 +19,7 @@ function Header(props) {
       <Link to="/">Home</Link>
       <Link to="/randomCat">Cat Picture</Link>
       <Link to="/randomCatFact">Cat Fact</Link>
+      <Link to="/catBreeds">Cat Breeds</Link>
       <Link to="/randomDog"> Dog Picture</Link>
     </MainContainer>
   );
