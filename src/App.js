@@ -1,10 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Router } from "@reach/router";
-import Header from "./Header/Header";
-import HomePage from "./HomePage";
-import RandomCatImage from "./Cats/RandomCatImage";
-import "./App.css";
+import React from 'react';
+import styled from 'styled-components';
+import { Router } from '@reach/router';
+import Header from './Header/Header';
+import HomePage from './HomePage';
+import RandomCatImage from './Cats/RandomCatImage';
+import './App.css';
+import RandomDogImage from './Dogs/RandomDogImage';
+import RandomCatFact from './Cats/RandomCatFact';
 
 const MainContainer = styled.div`
   width: 500px;
@@ -21,6 +23,8 @@ function App() {
       <Router>
         <HomePage path="/" />
         <RandomCatImage path="/randomCat" />
+        <RandomDogImage path="/randomDog" />
+        <RandomCatFact path="/randomCatFact" />
       </Router>
     </MainContainer>
   );

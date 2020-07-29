@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "@reach/router";
-import styled from "styled-components";
+import React from 'react';
+import { Link } from '@reach/router';
+import styled from 'styled-components';
 
 const MainContainer = styled.nav`
   width: 100%;
@@ -18,6 +18,7 @@ function Header(props) {
     <MainContainer>
       <Link to="/">Home</Link>
       <Link to="/randomCat">Cat Picture</Link>
+      <Link to="/randomCatFact">Cat Fact</Link>
       <Link to="/randomDog"> Dog Picture</Link>
     </MainContainer>
   );
